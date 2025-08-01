@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ESP32 LED Control</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>LED Effects Control Panel</h2>
+  {% for i in range(6) %}
+    <form action="/effect/{{ i }}">
+      <button type="submit">Effect {{ i }}</button>
+    </form>
+  {% endfor %}
+</body>
+</html>
